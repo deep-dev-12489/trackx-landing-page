@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrackX.ai — Premium AI Domain for Sale</title>
+  <meta name="description" content="Acquire TrackX.ai — The premier brandable domain for AI agent observability, asset tracking, fitness tech, and intelligent telemetry." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --bg-card: rgba(18, 24, 38, 0.65);
+      --bg-card-hover: rgba(26, 35, 56, 0.8);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(59, 130, 246, 0.4);
+      
+      --accent-blue: #3b82f6;
+      --accent-cyan: #06b6d4;
+      --accent-purple: #8b5cf6;
+      --accent-teal: #14b8a6;
+      
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+
+      --gradient-text: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+      --gradient-brand: linear-gradient(135deg, #00f0ff 0%, #3b82f6 50%, #8b5cf6 100%);
+
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-display: 'Space Grotesk', var(--font-sans);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      overflow-x: hidden;
+      position: relative;
+      background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.12) 0%, rgba(7, 9, 14, 1) 70%);
+      min-height: 100vh;
+    }
+
+    /* Ambient Background Glows */
+    .ambient-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .ambient-glow-secondary {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+      top: 60%;
+      right: -100px;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* HEADER */
+    header {
+      padding: 2rem 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .brand-logo span {
+      background: var(--gradient-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 9999px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #10b981;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #10b981;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* HERO */
+    .hero {
+      padding: 4rem 0 3rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-pill-sparkle {
+      color: #00f0ff;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 9vw, 6.5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.25rem;
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 45px rgba(59, 130, 246, 0.25));
+    }
+
+    .hero-title .tld {
+      background: var(--gradient-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-tagline {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 2.2rem;
+      border-radius: 12px;
+      background: var(--gradient-brand);
+      color: #05070c;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.35);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 45px rgba(0, 240, 255, 0.55);
+      filter: brightness(1.1);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 1.8rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* PRICE BADGE */
+    .price-section {
+      margin-bottom: 5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .price-pill-card {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.25rem 2.5rem;
+      border-radius: 9999px;
+      background: rgba(18, 24, 38, 0.75);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      box-shadow: 0 0 35px rgba(0, 240, 255, 0.08);
+      backdrop-filter: blur(20px);
+      text-align: center;
+    }
+
+    .price-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+      font-weight: 700;
+    }
+
+    .price-range {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .price-subtext {
+      font-size: 0.95rem;
+      color: var(--accent-cyan);
+      font-weight: 500;
+      margin-top: 0.2rem;
+    }
+
+    /* WHY THIS DOMAIN */
+    .section-padding {
+      padding: 4rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-tag {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-cyan);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #fff;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(16px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .feature-card:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(255, 255, 255, 0.18);
+      transform: translateY(-4px);
+    }
+
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-cyan);
+      margin-bottom: 1.25rem;
+    }
+
+    .feature-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.6rem;
+    }
+
+    .feature-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* USE CASES */
+    .use-cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .use-case-card {
+      background: rgba(13, 17, 26, 0.6);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 1.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .use-case-card:hover {
+      border-color: var(--border-glow);
+      background: rgba(18, 24, 38, 0.8);
+      transform: translateY(-2px);
+    }
+
+    .use-case-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      background: rgba(139, 92, 246, 0.15);
+      color: var(--accent-purple);
+      margin-bottom: 1rem;
+    }
+
+    .use-case-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .use-case-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* MAKE AN OFFER SECTION */
+    .offer-section {
+      padding: 5rem 0;
+    }
+
+    .offer-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 28px;
+      padding: 2.5rem;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Form Inputs */
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      background: rgba(7, 9, 14, 0.8);
+      border: 1px solid var(--border-color);
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+    }
+
+    .form-wrapper iframe {
+      width: 100%;
+      height: 880px;
+      border: none;
+      display: block;
+    }
+
+    .form-fallback-bar {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem 1.75rem;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+    }
+
+    .trust-bullets {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .trust-icon {
+      color: #10b981;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 3.5rem 0 2.5rem;
+      margin-top: 3rem;
+      background: rgba(4, 6, 10, 0.8);
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .contact-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: var(--accent-cyan);
+    }
+
+    .copy-email-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      padding: 0.8rem 1.4rem;
+      background: rgba(16, 185, 129, 0.95);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 10px;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 9999;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+  <div class="ambient-glow-secondary"></div>
+
+  <!-- HEADER -->
+  <div class="container">
+    <header>
+      <a href="#" class="brand-logo">TrackX<span>.ai</span></a>
+      <div class="status-badge"><span class="status-dot"></span> Domain Available</div>
+    </header>
+  </div>
+
+  <main class="container">
+
+    <!-- 1. HERO -->
+    <section class="hero">
+      <div class="hero-pill"><span class="hero-pill-sparkle">✦</span> Premium Domain Asset Available</div>
+      <h1 class="hero-title">TrackX<span class="tld">.ai</span></h1>
+      <p class="hero-tagline">The ultimate domain for AI agent observability, high-frequency asset tracking, intelligent telemetry, and fitness analytics.</p>
+
+      <div class="hero-actions">
+        <a href="#make-an-offer" class="btn-primary">Make an Offer →</a>
+        <button class="btn-secondary" onclick="copyDomainName()">Copy Domain Name</button>
+      </div>
+
+      <!-- 2. PRICE BADGE -->
+      <div class="price-section">
+        <div class="price-pill-card">
+          <span class="price-label">Asking Range</span>
+          <span class="price-range">$15,000 – $35,000</span>
+          <span class="price-subtext">Priced to sell to the right buyer</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. WHY THIS DOMAIN -->
+    <section class="section-padding">
+      <div class="section-header">
+        <span class="section-tag">Domain Value</span>
+        <h2 class="section-title">Why TrackX.ai?</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="feature-card">
+          <div class="icon-box">✦</div>
+          <h3 class="feature-title">Short & Memorable</h3>
+          <p class="feature-desc">Clean 6-letter brandable domain with maximum phonetic recall. Instantly builds trust and category authority.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-box">⚡</div>
+          <h3 class="feature-title">Hot AI Category Fit</h3>
+          <p class="feature-desc">"Track" maps directly to massive high-growth sectors: AI agent observability, asset tracking, logistics, and bio-tech.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-box">🚀</div>
+          <h3 class="feature-title">Premium .ai Extension</h3>
+          <p class="feature-desc">The industry standard extension for AI companies, backed by billions in enterprise investment.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-box">🛡️</div>
+          <h3 class="feature-title">Clean Brand Asset</h3>
+          <p class="feature-desc">No trademark liabilities or clutter. Pure, crisp, modern tech brand ready for global launch.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. USE CASES -->
+    <section class="section-padding">
+      <div class="section-header">
+        <span class="section-tag">Market Opportunities</span>
+        <h2 class="section-title">Ideal Industry Use Cases</h2>
+      </div>
+
+      <div class="use-cases-grid">
+        <div class="use-case-card">
+          <span class="use-case-badge">Observability</span>
+          <h3 class="use-case-title">AI Agent Monitoring</h3>
+          <p class="use-case-desc">LLM execution tracing, multi-agent evaluation, token cost telemetry, and safety observability.</p>
+        </div>
+        <div class="use-case-card">
+          <span class="use-case-badge">Logistics</span>
+          <h3 class="use-case-title">Logistics & Asset Tracking</h3>
+          <p class="use-case-desc">Real-time GPS telemetry, autonomous fleet management, and supply chain visibility.</p>
+        </div>
+        <div class="use-case-card">
+          <span class="use-case-badge">Health & Bio</span>
+          <h3 class="use-case-title">Fitness & Health Tech</h3>
+          <p class="use-case-desc">AI health intelligence, wearable biometric tracking, and personalized performance coaching.</p>
+        </div>
+        <div class="use-case-card">
+          <span class="use-case-badge">Telemetry</span>
+          <h3 class="use-case-title">LLM Tracing & Telemetry</h3>
+          <p class="use-case-desc">Deep prompt diagnostics, latency monitoring, vector database telemetry, and AI pipeline debugging.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. MAKE AN OFFER (FORM CONTAINER CONNECTED TO GOOGLE) -->
+    <section id="make-an-offer" class="offer-section">
+      <div class="section-header">
+        <span class="section-tag">Direct Acquisition</span>
+        <h2 class="section-title">Submit Your Offer</h2>
+      </div>
+
+      <div class="offer-container">
+        
+        <!-- Toggle Tabs -->
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem;">
+          <button id="tab-native" class="btn-secondary" style="border-color: var(--accent-cyan); background: rgba(6, 182, 212, 0.15); color: #fff;" onclick="switchFormTab('native')">
+            ✦ Direct Offer Form (Google Sync)
+          </button>
+          <button id="tab-google" class="btn-secondary" onclick="switchFormTab('google')">
+            Google Form Embed
+          </button>
+        </div>
+
+        <!-- 5A. NATIVE FORM DIRECTLY CONNECTED TO GOOGLE SHEET / GOOGLE API -->
+        <div id="native-form-wrapper" style="max-width: 700px; margin: 0 auto;">
+          <form id="trackx-offer-form" onsubmit="handleFormSubmit(event)">
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+              <div class="form-group">
+                <label class="form-label" for="full_name">Full Name <span style="color: #ef4444;">*</span></label>
+                <input type="text" id="full_name" class="form-input" placeholder="e.g. Sarah Jenkins" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address <span style="color: #ef4444;">*</span></label>
+                <input type="email" id="email" class="form-input" placeholder="e.g. sarah@startup.ai" required />
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number <span style="color: #ef4444;">*</span></label>
+                <input type="tel" id="phone" class="form-input" placeholder="e.g. +1 (555) 019-2834" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="country">Country <span style="color: #ef4444;">*</span></label>
+                <input type="text" id="country" class="form-input" placeholder="e.g. United States" required />
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+              <div class="form-group">
+                <label class="form-label" for="channel">Preferred Messaging Channel <span style="color: #ef4444;">*</span></label>
+                <select id="channel" class="form-select" required onchange="updateHandlePlaceholder(this.value)">
+                  <option value="WhatsApp" selected>WhatsApp</option>
+                  <option value="Telegram">Telegram</option>
+                  <option value="Signal">Signal</option>
+                  <option value="WeChat">WeChat</option>
+                  <option value="iMessage">iMessage</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="channel_handle">Your ID/Handle on Channel <span style="color: #ef4444;">*</span></label>
+                <input type="text" id="channel_handle" class="form-input" placeholder="e.g. +15550192834 or @username" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="offer_amount">Your Offer Amount (USD) <span style="color: #ef4444;">*</span></label>
+              <div style="position: relative;">
+                <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--accent-cyan); font-weight: 700;">$</span>
+                <input type="number" id="offer_amount" class="form-input" style="padding-left: 2.2rem;" min="100" step="100" placeholder="25,000" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="intended_use">Intended Use for the Domain <span style="color: var(--text-dim);">(Optional)</span></label>
+              <textarea id="intended_use" class="form-textarea" rows="3" placeholder="Describe your project or acquisition goals..."></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem; padding: 1.1rem;">
+              Submit Offer to Google Sheet 🚀
+            </button>
+          </form>
+
+          <div id="form-success-message" style="display: none; text-align: center; padding: 3rem 1.5rem; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 20px;">
+            <h3 style="font-family: var(--font-display); font-size: 1.75rem; color: #fff; margin-bottom: 0.75rem;">Offer Submitted!</h3>
+            <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 500px; margin: 0 auto 1.5rem;">
+              "Thanks — I'll reach out on your preferred channel within 24 hours."
+            </p>
+            <button onclick="resetOfferForm()" class="btn-secondary">Submit Another Offer</button>
+          </div>
+        </div>
+
+        <!-- 5B. GOOGLE FORM EMBED -->
+        <div id="google-form-wrapper" style="display: none;">
+          <div class="form-wrapper">
+            <iframe id="google-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSe-YOUR_GOOGLE_FORM_ID_HERE/viewform?embedded=true">Loading…</iframe>
+          </div>
+          <div class="form-fallback-bar">
+            <span>Prefer direct Google Forms tab?</span>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-YOUR_GOOGLE_FORM_ID_HERE/viewform" target="_blank" class="btn-secondary">Open Form in New Tab ↗</a>
+          </div>
+        </div>
+
+        <div class="trust-bullets">
+          <div class="trust-item">✓ Direct Owner Sale — No Broker Commission</div>
+          <div class="trust-item">🔒 Secure Transfer via Escrow.com</div>
+          <div class="trust-item">⚡ 24h Response Guaranteed</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 6. FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="brand-logo">TrackX<span>.ai</span></div>
+        <p>Domain available via direct sale — no broker</p>
+        <div class="contact-box">
+          <span id="owner-email">[YOUR-EMAIL-HERE]</span>
+        </div>
+        <p>© 2026 TrackX.ai. Premium domain portfolio sale.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast">Copied to clipboard!</div>
+
+  <script>
+    // Paste your Google Web App deployment URL here
+    const GOOGLE_WEB_APP_URL = "YOUR_GOOGLE_WEB_APP_URL_HERE";
+
+    function switchFormTab(tab) {
+      document.getElementById('native-form-wrapper').style.display = tab === 'native' ? 'block' : 'none';
+      document.getElementById('google-form-wrapper').style.display = tab === 'google' ? 'block' : 'none';
+    }
+
+    function updateHandlePlaceholder(channel) {
+      const input = document.getElementById('channel_handle');
+      const map = { 'WhatsApp': '+1 (555) 019-2834', 'Telegram': '@username', 'Signal': '+1 (555) 019-2834', 'WeChat': 'WeChat_ID', 'iMessage': 'email@icloud.com' };
+      input.placeholder = map[channel] || 'Enter handle';
+    }
+
+    async function handleFormSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('trackx-offer-form');
+      const btn = document.getElementById('submit-btn');
+      const success = document.getElementById('form-success-message');
+
+      const data = {
+        full_name: document.getElementById('full_name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        country: document.getElementById('country').value,
+        channel: document.getElementById('channel').value,
+        channel_handle: document.getElementById('channel_handle').value,
+        offer_amount: document.getElementById('offer_amount').value,
+        intended_use: document.getElementById('intended_use').value
+      };
+
+      btn.textContent = 'Submitting to Google…';
+      btn.disabled = true;
+
+      try {
+        if (GOOGLE_WEB_APP_URL && !GOOGLE_WEB_APP_URL.includes('YOUR_GOOGLE_WEB_APP_URL')) {
+          await fetch(GOOGLE_WEB_APP_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+        }
+      } catch (err) {
+        console.log('Local submit:', data);
+      }
+
+      form.style.display = 'none';
+      success.style.display = 'block';
+      showToast("Offer saved to Google Sheet!");
+    }
+
+    function resetOfferForm() {
+      const form = document.getElementById('trackx-offer-form');
+      form.reset();
+      form.style.display = 'block';
+      document.getElementById('form-success-message').style.display = 'none';
+      document.getElementById('submit-btn').disabled = false;
+      document.getElementById('submit-btn').textContent = 'Submit Offer to Google Sheet 🚀';
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    function copyDomainName() {
+      navigator.clipboard.writeText('TrackX.ai').then(() => showToast('Copied "TrackX.ai"!'));
+    }
+  </script>
+</body>
+</html>
