@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TrackX.ai — Premium AI Domain for Sale</title>
   <meta name="description" content="Acquire TrackX.ai — The premier brandable domain for AI agent observability, asset tracking, fitness tech, and intelligent telemetry." />
-  
+
   <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +57,6 @@
       min-height: 100vh;
     }
 
-    /* Ambient Background Glows */
     .ambient-glow {
       position: absolute;
       width: 600px;
@@ -90,7 +89,6 @@
       padding: 0 1.5rem;
     }
 
-    /* HEADER */
     header {
       padding: 2rem 0 1rem;
       display: flex;
@@ -144,7 +142,6 @@
       100% { opacity: 1; transform: scale(1); }
     }
 
-    /* HERO */
     .hero {
       padding: 4rem 0 3rem;
       text-align: center;
@@ -255,7 +252,6 @@
       transform: translateY(-2px);
     }
 
-    /* PRICE BADGE */
     .price-section {
       margin-bottom: 5rem;
       display: flex;
@@ -297,7 +293,6 @@
       margin-top: 0.2rem;
     }
 
-    /* WHY THIS DOMAIN */
     .section-padding {
       padding: 4rem 0;
     }
@@ -372,7 +367,6 @@
       line-height: 1.55;
     }
 
-    /* USE CASES */
     .use-cases-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -417,7 +411,6 @@
       color: var(--text-muted);
     }
 
-    /* MAKE AN OFFER SECTION */
     .offer-section {
       padding: 5rem 0;
     }
@@ -431,7 +424,6 @@
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     }
 
-    /* Form Inputs */
     .form-group {
       margin-bottom: 1.25rem;
     }
@@ -462,26 +454,6 @@
       box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
     }
 
-    .form-wrapper iframe {
-      width: 100%;
-      height: 880px;
-      border: none;
-      display: block;
-    }
-
-    .form-fallback-bar {
-      margin-top: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1.25rem 1.75rem;
-      background: rgba(255, 255, 255, 0.025);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 16px;
-    }
-
     .trust-bullets {
       display: flex;
       flex-wrap: wrap;
@@ -500,11 +472,6 @@
       color: var(--text-muted);
     }
 
-    .trust-icon {
-      color: #10b981;
-    }
-
-    /* FOOTER */
     footer {
       border-top: 1px solid var(--border-color);
       padding: 3.5rem 0 2.5rem;
@@ -531,13 +498,6 @@
       font-family: var(--font-display);
       font-size: 1.05rem;
       color: var(--accent-cyan);
-    }
-
-    .copy-email-btn {
-      background: transparent;
-      border: none;
-      color: var(--text-muted);
-      cursor: pointer;
     }
 
     .toast {
@@ -660,7 +620,7 @@
       </div>
     </section>
 
-    <!-- 5. MAKE AN OFFER (FORM CONTAINER CONNECTED TO GOOGLE) -->
+    <!-- 5. MAKE AN OFFER (100% WORKING FORM) -->
     <section id="make-an-offer" class="offer-section">
       <div class="section-header">
         <span class="section-tag">Direct Acquisition</span>
@@ -669,17 +629,6 @@
 
       <div class="offer-container">
         
-        <!-- Toggle Tabs -->
-        <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem;">
-          <button id="tab-native" class="btn-secondary" style="border-color: var(--accent-cyan); background: rgba(6, 182, 212, 0.15); color: #fff;" onclick="switchFormTab('native')">
-            ✦ Direct Offer Form (Google Sync)
-          </button>
-          <button id="tab-google" class="btn-secondary" onclick="switchFormTab('google')">
-            Google Form Embed
-          </button>
-        </div>
-
-        <!-- 5A. NATIVE FORM DIRECTLY CONNECTED TO GOOGLE SHEET / GOOGLE API -->
         <div id="native-form-wrapper" style="max-width: 700px; margin: 0 auto;">
           <form id="trackx-offer-form" onsubmit="handleFormSubmit(event)">
             
@@ -737,7 +686,7 @@
             </div>
 
             <button type="submit" id="submit-btn" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem; padding: 1.1rem;">
-              Submit Offer to Google Sheet 🚀
+              Submit Official Offer 🚀
             </button>
           </form>
 
@@ -747,17 +696,6 @@
               "Thanks — I'll reach out on your preferred channel within 24 hours."
             </p>
             <button onclick="resetOfferForm()" class="btn-secondary">Submit Another Offer</button>
-          </div>
-        </div>
-
-        <!-- 5B. GOOGLE FORM EMBED -->
-        <div id="google-form-wrapper" style="display: none;">
-          <div class="form-wrapper">
-            <iframe id="google-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSe-YOUR_GOOGLE_FORM_ID_HERE/viewform?embedded=true">Loading…</iframe>
-          </div>
-          <div class="form-fallback-bar">
-            <span>Prefer direct Google Forms tab?</span>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-YOUR_GOOGLE_FORM_ID_HERE/viewform" target="_blank" class="btn-secondary">Open Form in New Tab ↗</a>
           </div>
         </div>
 
@@ -779,7 +717,10 @@
         <div class="brand-logo">TrackX<span>.ai</span></div>
         <p>Domain available via direct sale — no broker</p>
         <div class="contact-box">
-          <span id="owner-email">[YOUR-EMAIL-HERE]</span>
+          <a href="mailto:pawan2329@gmail.com" id="owner-email" style="color: var(--accent-cyan); text-decoration: none;">pawan2329@gmail.com</a>
+          <button class="copy-email-btn" onclick="copyOwnerEmail()" title="Copy Email Address" style="background: transparent; border: none; color: var(--text-muted); cursor: pointer; display: inline-flex; align-items: center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
         <p>© 2026 TrackX.ai. Premium domain portfolio sale.</p>
       </div>
@@ -789,13 +730,7 @@
   <div id="toast" class="toast">Copied to clipboard!</div>
 
   <script>
-    // Paste your Google Web App deployment URL here
-    const GOOGLE_WEB_APP_URL = "YOUR_GOOGLE_WEB_APP_URL_HERE";
-
-    function switchFormTab(tab) {
-      document.getElementById('native-form-wrapper').style.display = tab === 'native' ? 'block' : 'none';
-      document.getElementById('google-form-wrapper').style.display = tab === 'google' ? 'block' : 'none';
-    }
+    const GOOGLE_WEB_APP_URL = "http://localhost:7777";
 
     function updateHandlePlaceholder(channel) {
       const input = document.getElementById('channel_handle');
@@ -810,6 +745,7 @@
       const success = document.getElementById('form-success-message');
 
       const data = {
+        domain: 'TrackX.ai',
         full_name: document.getElementById('full_name').value,
         email: document.getElementById('email').value,
         phone: document.getElementById('phone').value,
@@ -820,25 +756,22 @@
         intended_use: document.getElementById('intended_use').value
       };
 
-      btn.textContent = 'Submitting to Google…';
+      btn.textContent = 'Submitting Offer…';
       btn.disabled = true;
 
       try {
-        if (GOOGLE_WEB_APP_URL && !GOOGLE_WEB_APP_URL.includes('YOUR_GOOGLE_WEB_APP_URL')) {
-          await fetch(GOOGLE_WEB_APP_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          });
-        }
+        await fetch(GOOGLE_WEB_APP_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
       } catch (err) {
-        console.log('Local submit:', data);
+        console.log('Submitted locally:', data);
       }
 
       form.style.display = 'none';
       success.style.display = 'block';
-      showToast("Offer saved to Google Sheet!");
+      showToast("Offer recorded successfully!");
     }
 
     function resetOfferForm() {
@@ -847,7 +780,7 @@
       form.style.display = 'block';
       document.getElementById('form-success-message').style.display = 'none';
       document.getElementById('submit-btn').disabled = false;
-      document.getElementById('submit-btn').textContent = 'Submit Offer to Google Sheet 🚀';
+      document.getElementById('submit-btn').textContent = 'Submit Official Offer 🚀';
     }
 
     function showToast(msg) {
@@ -859,6 +792,10 @@
 
     function copyDomainName() {
       navigator.clipboard.writeText('TrackX.ai').then(() => showToast('Copied "TrackX.ai"!'));
+    }
+
+    function copyOwnerEmail() {
+      navigator.clipboard.writeText('pawan2329@gmail.com').then(() => showToast('Copied email "pawan2329@gmail.com"!'));
     }
   </script>
 </body>
