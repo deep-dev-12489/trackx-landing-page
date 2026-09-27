@@ -745,6 +745,7 @@
       const success = document.getElementById('form-success-message');
 
       const data = {
+        "_subject": "🔥 New Offer for TrackX.ai!",
         domain: 'TrackX.ai',
         full_name: document.getElementById('full_name').value,
         email: document.getElementById('email').value,
@@ -760,13 +761,16 @@
       btn.disabled = true;
 
       try {
-        await fetch(GOOGLE_WEB_APP_URL, {
+        await fetch('https://formsubmit.co/ajax/pawan2329@gmail.com', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
           body: JSON.stringify(data)
         });
       } catch (err) {
-        console.log('Submitted locally:', data);
+        console.log('Submitted:', data);
       }
 
       form.style.display = 'none';
